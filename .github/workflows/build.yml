@@ -1,4 +1,4 @@
-name: Build Check on PR
+name: Build Check onlyy PR
 
 on:
   pull_request:
