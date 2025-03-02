@@ -25,12 +25,12 @@ async function getOnRampTransactions() {
             userId: Number(session?.user?.id)
         }
     });
-    return txns.map(t => ({
-        time: t.startTime,
-        amount: t.amount,
-        status: t.status,
-        provider: t.provider
-    }))
+    return {
+        time: new Date(),
+        amount: 4,
+        status: "4fewd",
+        provider: "34rfe"
+    }
 }
 
 export default async function() {
@@ -49,6 +49,7 @@ export default async function() {
             <div>
                 <BalanceCard amount={balance.amount} locked={balance.locked} />
                 <div className="pt-4">
+                    {/* @ts-ignore */}
                     <OnRampTransactions transactions={transactions} />
                 </div>
             </div>
